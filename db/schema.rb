@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_22_210517) do
+ActiveRecord::Schema.define(version: 2022_10_22_210948) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(version: 2022_10_22_210517) do
     t.date "item_returned"
     t.string "description"
     t.integer "technician_id"
+  end
+
+  create_table "technicians", force: :cascade do |t|
+    t.string "name"
+    t.string "title"
+    t.integer "company_experience"
   end
 
 end
