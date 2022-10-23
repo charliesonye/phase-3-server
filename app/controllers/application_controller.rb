@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do 
-    "Let this server as the Home page message".to_json
+    "Let this serve as the Home page message".to_json
   end
 
   get "/technicians" do
@@ -16,7 +16,12 @@ class ApplicationController < Sinatra::Base
     techie.to_json(include: :customers)
   end
 
-  get "/customer/:id" do 
+  get "/customers" do 
+      customers = Customer.all
+      customers.to_json
+  end 
+  
+  get "/customers/:id" do 
     customer = Customer.find_by(id: params[:id])
     if customer.item_returned
     customer.to_json
