@@ -28,7 +28,19 @@ class ApplicationController < Sinatra::Base
     else
       customer.item_returned = "Pending"
       customer.to_json
-    end
+    end 
+  end
+
+  post "/customers" do
+    new_customer = Customer.create({
+      name: params[:name],
+      item: params[:item],
+      item_received: params[:item_received],
+      item_returned: params[:item_returned],
+      description: params[:description],
+      technician_id: params[:technician_id]
+    })
+    new_customer.to_json
   end
 
 end
