@@ -43,4 +43,10 @@ class ApplicationController < Sinatra::Base
     new_customer.to_json
   end
 
+  patch "/technicians/:id" do
+    techie = Technician.find(params[:id])
+    techie.update(title: params[:title])
+    techie.to_json
+  end
+
 end
