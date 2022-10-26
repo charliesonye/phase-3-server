@@ -49,4 +49,9 @@ class ApplicationController < Sinatra::Base
     techie.to_json
   end
 
+  delete "/technicians/:id" do
+    techie = Technician.find(params[:id])
+    techie.destroy
+  end
+
 end
