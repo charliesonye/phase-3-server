@@ -43,6 +43,16 @@ class ApplicationController < Sinatra::Base
     new_customer.to_json
   end
 
+  post "/technicians" do 
+    
+    techie = Technician.create({
+      name: params[:name],
+      title: params[:title],
+      company_experience: params[:experience]
+    })
+    techie.to_json
+  end
+
   patch "/technicians/:id" do
     techie = Technician.find(params[:id])
     techie.update(title: params[:title])
