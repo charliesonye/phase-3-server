@@ -25,6 +25,7 @@ The technologies used within this app:
 ## Setup
 To run locally:
 ```
+$ bundle install
 $ rake server
 
 ```
