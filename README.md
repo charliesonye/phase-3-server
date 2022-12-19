@@ -20,11 +20,12 @@ This project serves as a database for a company to track data about technicians 
 
 ## Technologies
 The technologies used within this app:
-* Ruby Gems: Sinatra, Active Record, SQLite3, Rake
+* Ruby Gems: Sinatra, Active Record, SQLite3, Rake, Thin
 
 ## Setup
 To run locally:
 ```
+$ cd phase-3-server 
 $ bundle install
 $ rake server
 
