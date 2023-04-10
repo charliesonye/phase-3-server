@@ -27,6 +27,8 @@ To run locally:
 ```
 $ cd phase-3-server 
 $ bundle install
-$ rake server
+$ bundle exec rake db:migrate
+$ bundle exec rake db:seed
+$ bundle exec rake server
 
 ```
